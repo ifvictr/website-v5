@@ -68,23 +68,6 @@ const IndexPage = ({ data }) => (
         </Flex>
       </Container>
     </Section>
-    <Section>
-      <Container maxWidth={64}>
-        <Flex /* flexDirection={['column', null, 'row']} */>
-          <SectionDescription>
-            <SectionHeading>Posts</SectionHeading>
-            <Text color="slate">Writing about anything, really.</Text>
-          </SectionDescription>
-          <SectionGrid>
-            {data.posts.edges
-              .map(({ node }) => node)
-              .map(post => (
-                <PostCard data={post} key={post.id} />
-              ))}
-          </SectionGrid>
-        </Flex>
-      </Container>
-    </Section>
     <Footer />
   </Layout>
 )
